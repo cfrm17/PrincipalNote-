@@ -4,7 +4,7 @@ A principal protected deposit note consists of zero plus call option and linear 
 
 Zero Plus Call is a CAD denominated principal protected note ($100CDN per note), referencing a basked of USD hedge fund investments. The notes are lodged in the Canadian Depository for Securities Ltd., and ultimately marketed to smaller investors.
 
-The value of the note to the investor (the ‘note value’) has an ultimate floor of the current price of a (CAD) zero coupon bond maturing at the maturity of the option, providing principal protection. The valuation of this structure essentially reduces to the valuation of the Zero plus a leveraged investment in an accreting strike option.
+The value of the note to the investor (the ‘note value’) has an ultimate floor of the current price (see https://finpricing.com/lib/FiBond.html) of a (CAD) zero coupon bond maturing at the maturity of the option, providing principal protection. The valuation of this structure essentially reduces to the valuation of the Zero plus a leveraged investment in an accreting strike option.
 
 Initially the $100CAD investment is split up into the price of a CAD zero coupon bond Z0 maturing at T (option maturity), and the remainder:
 	OV(CAD) = $100 − Z0,
@@ -29,14 +29,5 @@ At initiation of the deal the client invests an amount BV0 _ $10M, part of which
 The bond floor is initially set at some fraction above the price of a Zero coupon bond maturing at option maturity with x ~ 3%. (In fact, x is chosen so that the Leverage Ratio, below, is set equal to a target leverage ration of ~ 3.72.) At the end of every month (n) thereafter the bond floor accretes a constant amount every month (t is an integer representing the number of months since the starting date):
 
 The Capital Basis CBt at every month-end is capped at BV0, but can be less due to capital contributions/withdrawals that occur during the life of the deal: If there are no capital contributions/withdrawals then CBt = CBt−1, if the are then CBt = HFIt + BFHedget. Every month a Principal Protection Fee is charged against the capital basis:
- 
-
-Reference:
-
-https://finpricing.com/lib/EqBarrier.html
-
-https://zenodo.org/record/6539656/files/zenodo-pp-note.pdf
-
-https://zenodo.org/record/6539656#.YpDuMqgpDq4
 
 
